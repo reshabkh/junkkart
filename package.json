@@ -1,0 +1,25 @@
+{
+  "name": "junkkart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Reshab",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bookshelf": "^0.12.0",
+    "bookshelf-transaction-manager": "^0.2.4",
+    "express": "^4.16.2",
+    "knex": "^0.13.0",
+    "mysql": "^2.15.0",
+    "sql": "^0.78.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.1"
+  }
+}
