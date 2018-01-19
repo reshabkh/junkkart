@@ -11,12 +11,19 @@
   "author": "Reshab",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "bookshelf": "^0.12.0",
     "bookshelf-transaction-manager": "^0.2.4",
     "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "jwt-simple": "^0.5.1",
     "knex": "^0.13.0",
+    "lodash": "^4.17.4",
     "mysql": "^2.15.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
     "sql": "^0.78.0"
   },
   "devDependencies": {

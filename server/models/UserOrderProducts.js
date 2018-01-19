@@ -8,7 +8,7 @@ var UserOrderProduct = Bookshelf.Model.extend({
   idAttribute: 'UserOrderProductId',
   hasTimestamps: false,  //if you want to write true then first add two column in useraddress table
   userorder:function(){
-    return this.belongsTo('UserOrderModel');
+    return this.belongsTo('UserOrder','UserOrderId');
   }
 });
 
@@ -16,8 +16,8 @@ var UserOrderProducts = Bookshelf.Collection.extend({
   model: UserOrderProduct
 });
 
-var product = Bookshelf.model('UserOrderProduct', UserOrderProduct);
-var products = Bookshelf.collection('UserOrderProducts',UserOrderProducts);
+ Bookshelf.model('UserOrderProduct', UserOrderProduct);
+ Bookshelf.collection('UserOrderProducts',UserOrderProducts);
 
-exports.UserOrderProduct =  product;
-exports.UserOrderProducts = products;
+exports.UserOrderProduct =  UserOrderProduct;
+exports.UserOrderProducts = UserOrderProducts;

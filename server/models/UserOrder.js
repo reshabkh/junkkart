@@ -1,6 +1,7 @@
 'use strict';
 var Bookshelf = require('./database');
 var UserAddress = require('./UserAddress');
+var UserOrderProduct = require('./UserOrderProducts');
 var UserAddressModel = UserAddress.UserAddress;
 
 Bookshelf.plugin('registry');
@@ -9,10 +10,10 @@ var UserOrder = Bookshelf.Model.extend({
   idAttribute: 'UserOrderId',
   hasTimestamps: false, //if you want to write true then first add two column in useraddress table
   useraddress: function() {
-       return this.hasOne('UserAddressModel');
+       return this.hasOne('UserAddress', 'UserAddressId');
  },
  userorderproducts: function() {
-      return this.hasMany('UserOrderProductsModel');
+      return this.hasMany('UserOrderProduct','UserOrderProductId');
  }
 });
 
