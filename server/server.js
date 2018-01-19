@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser =require('body-parser');
+const port = process.env.PORT || 3000;
 var getProduct = require('./routes/getProducts');
 var saveUserAddress = require('./routes/saveUserAddress');
 var createUserOrders = require('./routes/createUserOrders');
@@ -25,6 +26,6 @@ app.get('/getUserOrders',getUserOrders.getUserOrders);
 app.get('/getUserOrderDetails',getUserOrderDetails.getUserOrderDetails);
 app.post('/usersignup',usersignup.usersignup);
 app.post('/userlogin',userlogin.userlogin);
-app.listen(3000, function(){
-  console.log('started on port 3000');
+app.listen(port, function(){
+  console.log(`started on port ${port}`);
 });
