@@ -10,7 +10,7 @@ var dbConfig = {
     charset: 'utf8'
   }
 }
-var dbConfig = {
+var JAWSDB_URL = {
   client: 'mysql',
  connection :{
   host: 'cig4l2op6r0fxymw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
@@ -21,7 +21,7 @@ var dbConfig = {
   }
 }
 
-var knex = require('knex')(dbConfig);
+var knex = require('knex')(dbConfig || JAWSDB_URL);
 var bookshelf = require('bookshelf')(knex);
 bookshelf.plugin('registry');
 //bookshelf.plugin(require('bookshelf-transaction-manager');
